@@ -1,0 +1,146 @@
+/*main-styles*/
+
+body {
+  background-color: #fff;
+  color: #1c1c1c;
+  font-size: 14px;
+}
+
+.container {
+  border: 1px solid #888;
+  margin: 40px auto;
+  max-width: 360px;
+  max-height: 540px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  position: relative;
+}
+
+.scroll {
+  overflow-y: scroll;
+}
+
+header {
+  height: 20px;
+  background-color: #fff;
+  padding: 5px;
+  text-align: right;
+}
+
+.container:after, .container:before {
+  border-bottom: 14px solid #fff;
+	border-right: 14px solid transparent;
+	border-left: 14px solid transparent;
+  left: 50%;
+  margin-left: -14px;
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+	vertical-align: middle;
+  position: absolute;
+  top: -14px;
+}
+
+.container:before {
+  border-bottom: 15px solid #888;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+  border-top-color: inherit;
+  top: -15px;
+  margin-left: -15px;
+}
+
+a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+a:hover {
+  color: #1c1c1c;
+}
+
+/*weather-styles*/
+
+.forecastToday {
+  height: 110px;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.forecastOther {
+  height: 100px;
+  display: inline;
+  display: flex;
+}
+
+.forecastTomorrow {
+  max-height: 100px;
+  background-color: #308796;
+  flex: 1;
+  padding: 10px;
+}
+
+.forecastNext {
+  max-height: 100px;
+  background-color: #91992e;
+  flex: 1;
+  padding: 10px;
+}
+
+
+/*reddit-styles*/
+
+.reddit {
+  height: 200px;
+  background-color: #fff;
+  padding: 14px;
+}
+
+.post {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eee;
+
+  /*flex-wrap: wrap;
+  flex-direction: column;*/
+}
+
+.postMain {
+  display: flex;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 3px;
+  overflow: hidden;
+}
+
+.post img {
+  left: 50%;
+  top: 50%;
+  height: 100%;
+}
+
+.title {
+  flex: 1;
+}
+
+.url, .comments, .author {
+  margin-top: 5px;
+  margin-right: 7px;
+  display: inline-block;
+  font-size: 11px;
+}
+
+.postDetails a {
+  color: #308796;
+}
+
+.postDetails {
+  margin-left: 60px;
+}

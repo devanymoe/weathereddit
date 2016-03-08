@@ -1,0 +1,11 @@
+.settings {
+  min-height: 440px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.zip, .subred, .submit, label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
