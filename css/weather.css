@@ -1,0 +1,25 @@
+.forecastToday {
+  height: 110px;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.forecastOther {
+  height: 100px;
+  display: inline;
+  display: flex;
+}
+
+.forecastTomorrow {
+  max-height: 100px;
+  background-color: #308796;
+  flex: 1;
+  padding: 10px;
+}
+
+.forecastNext {
+  max-height: 100px;
+  background-color: #91992e;
+  flex: 1;
+  padding: 10px;
+}
