@@ -9,9 +9,9 @@
   }).then(function(response) {
     var $forecast = response.forecast.txt_forecast.forecastday;
     var $forecastToday = $('.forecastToday');
-    var $today = $('<i class="wi"></i><div class="today"></div>');
+    var $icon = $('<i class="wi"></i>')
+    var $today = $('<div class="today"></div>');
     $today.find('.today').text($forecast[0].fcttext);
-    var $icon = $today.find('i');
     var iconPhrase = $forecast[0].icon;
     switch(iconPhrase) {
       case "chanceflurries":
@@ -56,6 +56,7 @@
       default:
         $icon.addClass('wi-cloud');
     }
+    $forecastToday.append($icon);
     $forecastToday.append($today);
   })
 })();

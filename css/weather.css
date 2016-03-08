@@ -23,3 +23,8 @@
   flex: 1;
   padding: 10px;
 }
+
+i {
+  font-size: 70px;
+  display: block;
+}
