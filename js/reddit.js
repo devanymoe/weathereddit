@@ -1,6 +1,6 @@
 (function() {
   var $userZip = 98125;
-  var $userSubReddit = "relationships";
+  var $userSubReddit = "aww";
   var subRedditURL = "https://www.reddit.com/r/" + $userSubReddit + ".json";
   var postText = [];
   $.ajax({
@@ -16,7 +16,6 @@
         var $postDetails = $('')
         $redditPost.find('.title').text(post.title);
         $redditPost.find('.postURL').attr('href',post.url);
-        $redditPost.find('.postURL').attr('target','_blank');
         $redditPost.find('.url').text('(' + post.domain + ')');
         $redditPost.find('.comments').text(post.num_comments + ' comments');
         $redditPost.find('.permalink').attr('href', 'https://www.reddit.com' + post.permalink)
@@ -41,7 +40,10 @@
         count += 1;
       }
     }
+  }).then(function(){
+    var $reddit = $('.reddit');
+    var $posts = $reddit.find('.post');
+    var $links = $posts.find('a');
+    $links.attr('target','_blank');
   });
-
-
 })()

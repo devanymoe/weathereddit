@@ -1,14 +1,19 @@
 /*main-styles*/
 
+html {
+  overflow: hidden;
+}
+
 body {
-  background-color: #fff;
+  background-color: transparent;
   color: #666;
   font-size: 14px;
+  padding-top: 6px;
 }
 
 .container {
   border: 1px solid #b7b7b7;
-  margin: 40px auto;
+  margin-top: 0;
   max-width: 400px;
   max-height: 540px;
   font-family: "Helvetica Neue";
@@ -16,6 +21,7 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
   border-radius: 2px;
   position: relative;
+  background-color: #fff;
 }
 
 .scroll {
