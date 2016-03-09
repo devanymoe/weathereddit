@@ -1,7 +1,6 @@
 (function() {
-  var $userZip = 98125;
-  var $userSubReddit = "aww";
-  var subRedditURL = "https://www.reddit.com/r/" + $userSubReddit + ".json";
+  var userSubReddit = localStorage.getItem('userSubReddit')
+  var subRedditURL = "https://www.reddit.com/r/" + userSubReddit + ".json";
   var postText = [];
   $.ajax({
     type: "GET",

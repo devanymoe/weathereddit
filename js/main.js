@@ -1,13 +1,11 @@
-var $userZip;
+var zip;
 var $userSubReddit;
 var $submit = $('#submitSettings');
 var $reddit = $('#reddit');
 
 $submit.on('click',function() {
-  $userZip = $('#zipcode').val();
-  $userSubReddit = $('#subreddit').val();
-  fetchWeather($userZip);
-  fetchReddit($userSubReddit);
+  localStorage.setItem('userZip', $('#zipcode').val());
+  localStorage.setItem('userSubReddit', $('#subreddit').val());
   location.href= 'index.html';
   // if zip is invalid, please try again
   // if subredit is invalid, please try again
