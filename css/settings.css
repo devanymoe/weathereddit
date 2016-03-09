@@ -1,5 +1,5 @@
 .settings {
-  min-height: 540px;
+  min-height: 500px;
   background-color: #fff;
   padding: 20px;
   max-width: 400px;
@@ -54,4 +54,10 @@ label {
 .logo img {
   width: 230px;
   opacity: 0.8;
+}
+
+.form p {
+  width: 218px;
+  margin-top: 20px;
+  color: red;
 }

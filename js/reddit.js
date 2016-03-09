@@ -1,6 +1,11 @@
 (function() {
-  var userSubReddit = localStorage.getItem('userSubReddit')
-  var subRedditURL = "https://www.reddit.com/r/" + userSubReddit + ".json";
+  if (localStorage.getItem('userSubReddit') === 'front page'){
+    var subRedditURL = "https://www.reddit.com/hot.json";
+  }
+  else {
+    var userSubReddit = localStorage.getItem('userSubReddit');
+    var subRedditURL = "https://www.reddit.com/r/" + userSubReddit + ".json";
+  }
   var postText = [];
   $.ajax({
     type: "GET",
@@ -31,9 +36,14 @@
           })
         }
         else {
-          $redditPost.find('img').attr('src',post.thumbnail);
-          $redditPost.find('.thumbURL').attr('href',post.url);
-          $redditPost.find('.thumbURL').attr('target','_blank');
+          if (post.thumbnail === "self"){
+            $redditPost.find('img').attr('src','images/textopen.jpg');
+          }
+          else {
+            $redditPost.find('img').attr('src',post.thumbnail);
+            $redditPost.find('.thumbURL').attr('href',post.url);
+            $redditPost.find('.thumbURL').attr('target','_blank');
+          }
         }
         $reddit.append($redditPost);
         count += 1;

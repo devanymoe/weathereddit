@@ -46,8 +46,12 @@ i {
   margin-bottom: 22%;
 }
 
-div .wi-cloud {
+div .wi-cloud, div .wi-day-sunny, div .wi-cloudy {
   margin-bottom: 0;
+}
+
+div .wi-day-cloudy {
+  margin-top: 15%;
 }
 
 .forecastOther i {
