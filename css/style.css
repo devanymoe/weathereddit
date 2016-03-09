@@ -29,10 +29,15 @@ body {
 }
 
 header {
-  height: 20px;
+  height: 30px;
   background-color: #fff;
   padding: 5px;
   text-align: right;
+}
+
+header img {
+  width: 40px;
+  opacity: 0.35;
 }
 
 .container:after, .container:before {
@@ -51,7 +56,7 @@ header {
 }
 
 .container:before {
-  border-bottom: 15px solid #888;
+  border-bottom: 15px solid #b7b7b7;
 	border-right: 15px solid transparent;
 	border-left: 15px solid transparent;
   border-top-color: inherit;

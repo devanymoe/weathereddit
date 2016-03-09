@@ -1,11 +1,57 @@
 .settings {
-  min-height: 440px;
+  min-height: 540px;
   background-color: #fff;
   padding: 20px;
+  max-width: 400px;
 }
 
-.zip, .subred, .submit, label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.form-container {
+  margin-left: 57px;
+}
+
+.form {
+}
+
+input {
+  width: 218px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid #aaa;
+  padding-left: 6px;
+  font-size: 12px;
+  color: #444;
+}
+
+button {
+  width: 228px;
+  height: 26px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.3);
+  font-size: 12px;
+  color: #fff;
+  background-color: #666;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.zip, .subred, .submit {
+  margin-bottom: 20px;
+}
+
+label, input {
+  display: block;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+.logo {
+  text-align: center;
+  margin: 20px 0 30px 0;
+}
+
+.logo img {
+  width: 230px;
+  opacity: 0.8;
 }

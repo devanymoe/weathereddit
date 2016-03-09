@@ -8,16 +8,23 @@
   <body>
     <div class="container">
       <div class="settings">
-        <div class="zip">
-          <label>Zip code:</label>
-          <input type="text" id="zipcode" pattern="\d{5}-?(\d{4})?" value="" required>
+        <div class="logo">
+          <img src="images/weatheredditlogo-full.png" alt="weathereddit logo">
         </div>
-        <div class="subred">
-          <label>Subreddit:</label>
-          <input type="text" id="subreddit" value="front page" required>
-        </div>
-        <div class="submit">
-          <button type="button" id="submitSettings">Done</button>
+        <div class="form-container">
+          <div class="form">
+            <div class="zip">
+              <label>Zip code:</label>
+              <input type="text" id="zipcode" pattern="\d{5}-?(\d{4})?" value="" required>
+            </div>
+            <div class="subred">
+              <label>Subreddit:</label>
+              <input type="text" id="subreddit" value="front page" required>
+            </div>
+            <div class="submit">
+              <button type="button" id="submitSettings">Save</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
