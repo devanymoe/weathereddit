@@ -1,6 +1,6 @@
 (function() {
   var $userZip = 98125;
-  var $userSubReddit = "trollxchromosomes";
+  var $userSubReddit = "relationships";
   var subRedditURL = "https://www.reddit.com/r/" + $userSubReddit + ".json";
   var postText = [];
   $.ajax({
@@ -26,8 +26,11 @@
         if (post.preview === undefined) {
           $redditPost.find('img').attr('src','images/textopen.jpg');
           $redditPost.find('img').addClass('textimage');
-          // $redditPost.find('.thumbURL').attr('href',post.url);
-          // $redditPost.find('.thumbURL').attr('target','_blank');
+          var $expandPost = $('.textimage');
+          $redditPost.find('img').on('click', function(){
+            console.log("check");
+
+          })
         }
         else {
           $redditPost.find('img').attr('src',post.thumbnail);
@@ -40,8 +43,5 @@
     }
   });
 
-  var $expandPost = $('.textimage');
-  $expandPost.on('click', function(){
-    console.log("check");
-  })
+
 })()

@@ -1,30 +1,99 @@
 .forecastToday {
   height: 110px;
-  background-color: #ccc;
+  background-color: #fff;
   padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .forecastOther {
   height: 100px;
-  display: inline;
   display: flex;
+  border-bottom: 1px solid #eee;
 }
 
 .forecastTomorrow {
   max-height: 100px;
-  background-color: #308796;
+  background-color: #fff;
   flex: 1;
   padding: 10px;
+  border-right: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .forecastNext {
   max-height: 100px;
-  background-color: #91992e;
+  background-color: #fff;
   flex: 1;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 i {
-  font-size: 70px;
+  font-size: 80px;
   display: block;
+  color: #999;
+  margin-bottom: 5%;
+}
+
+.todayIcon i {
+  margin-bottom: 22%;
+}
+
+div .wi-cloud {
+  margin-bottom: 0;
+}
+
+.forecastOther i {
+  font-size: 46px;
+  margin-right: 12px;
+}
+
+.forecastOther h2 {
+  flex: 1;
+}
+
+.weather h1 {
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 0;
+}
+
+.weather h2 {
+  font-size: 16px;
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  line-height: 0;
+}
+
+.todayContainer {
+
+}
+
+.todayIcon {
+  margin-right: 16px;
+  text-align: center;
+}
+
+.iconTwo, .iconThree {
+}
+
+.todayText {
+  font-size: 12px;
+}
+
+.highLow {
+  font-size: 24px;
+  margin-top: 4px;
+}
+
+.highLowLater {
+  font-size: 20px;
 }
