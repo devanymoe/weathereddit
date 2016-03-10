@@ -80,7 +80,7 @@
     var $weekdayOne = $('<h1 class="weekdayToday"></h1>');
     var $weekdayTwo = $('<div class="dayTwoText"><h2 class="weekdayTomorrow"></h2></div>');
     var $weekdayThree = $('<div class="dayThreeText"><h2 class="weekdayNext"></h2></div>');
-    $weekdayOne.text(dayOne + ", " + month + " " + day);
+    $weekdayOne.text(dayOne + ", " + month + "\u00a0" + day);
     var highOne = $simpleForecast[0].high.fahrenheit;
     var lowOne = $simpleForecast[0].low.fahrenheit;
     var highTwo = $simpleForecast[1].high.fahrenheit;

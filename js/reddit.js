@@ -6,7 +6,6 @@
     var userSubReddit = localStorage.getItem('userSubReddit');
     var subRedditURL = "https://www.reddit.com/r/" + userSubReddit + ".json";
   }
-  var postText = [];
   $.ajax({
     type: "GET",
     dataType: "json",
@@ -17,7 +16,6 @@
       var post = response.data.children[i].data
       if (post.stickied === false && count < 10) {
         var $redditPost = $('<div class="post"><div class="postMain"><a class="thumbURL"><div class="thumbnail"><img></div></a><div class="postContainer"><a class="postURL"><div class="title"></div></a><div class="postDetails"><span class="url"></span><a class="permalink"><span class="comments"></span></a><span class="author">by <a class="user"></a></span></div></div></div></div>');
-        var $postDetails = $('')
         $redditPost.find('.title').text(post.title);
         $redditPost.find('.postURL').attr('href',post.url);
         $redditPost.find('.url').text('(' + post.domain + ')');
@@ -25,14 +23,26 @@
         $redditPost.find('.permalink').attr('href', 'https://www.reddit.com' + post.permalink)
         $redditPost.find('.user').text(post.author);
         $redditPost.find('.user').attr('href', 'https://www.reddit.com/user/' + post.author);
-        postText.push(post.selftext);
         if (post.preview === undefined) {
           $redditPost.find('img').attr('src','images/textopen.jpg');
           $redditPost.find('img').addClass('textimage');
           var $expandPost = $('.textimage');
+          var $postText = post.selftext;
+          var $innerText = $('<p class="innerText hidden">' + $postText + '</p>')
+          var $postContainer = $('.postContainer');
+          $postContainer.append($innerText);
           $redditPost.find('img').on('click', function(){
-            console.log("check");
+            var $clickedImage = $(this);
+            var $thisMain = $clickedImage.closest('.postMain');
+            var $thisPostText = $thisMain.find('.innerText');
+            $thisPostText.toggleClass('hidden');
 
+
+            // need to first switch images on click.
+            // then toggle class on click
+
+            // var $postContainer = ('.postContainer');
+            // $postContainer.append('<p>posttexthere</p>')
           })
         }
         else {

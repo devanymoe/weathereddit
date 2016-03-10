@@ -1,12 +1,9 @@
 .settings {
-  min-height: 500px;
-  background-color: #fff;
-  padding: 20px;
-  max-width: 400px;
+  height: 500px;
 }
 
 .form-container {
-  margin-left: 57px;
+  margin-left: 78px;
 }
 
 .form {

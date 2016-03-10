@@ -4,19 +4,30 @@ var $submit = $('#submitSettings');
 var $reddit = $('#reddit');
 var $form = $('.form');
 var count = 0;
+var $zipcode = $('#zipcode');
+var $subreddit = $('#subreddit');
 
-// on index load, if userzip or usersubreddit is undefined or null, location.href= 'settings.html'
+if (window.location.pathname.indexOf('/index.html') !== -1) {
+  if (localStorage.getItem('userZip') === null || localStorage.getItem('userSubReddit') === null) {
+    location.href= 'settings.html';
+  }
+}
 
-$submit.on('click',function() {
+if (window.location.pathname.indexOf('/settings.html') !== -1) {
+  $zipcode.attr('value',localStorage.getItem('userZip'));
+  $subreddit.attr('value',localStorage.getItem('userSubReddit') || 'front page')
+}
+
+$form.on('submit',function() {
+  event.preventDefault();
   localStorage.setItem('userZip', $('#zipcode').val());
   localStorage.setItem('userSubReddit', $('#subreddit').val());
-  authenticate();
   count = 0;
+  $form.find('p').remove();
+  authenticate();
 })
 
 var authenticate = function(){
-  var zipResponse;
-  var subResponse;
   var zip = localStorage.getItem('userZip')
   var mykey = config.key;
   var weatherURL = "http://api.wunderground.com/api/" + config.key + "/forecast/q/" + zip + ".json";
@@ -34,11 +45,10 @@ var authenticate = function(){
     dataType: "json",
     url: weatherURL,
     success: function(data){
-      if (data.response.error.type !== null){
+      if (data.response.error !== undefined){
         $form.append('<p>Please enter a valid zip code.</p>');
       }
       else {
-        zipResponse = response;
         count += 1;
       }
     },

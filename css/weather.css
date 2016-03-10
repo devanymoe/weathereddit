@@ -1,5 +1,4 @@
 .forecastToday {
-  height: 110px;
   background-color: #fff;
   padding: 0px 20px 24px 20px;
   border-bottom: 1px solid #eee;
@@ -67,7 +66,7 @@ div .wi-day-cloudy {
   font-size: 24px;
   font-family: "Helvetica Neue";
   font-weight: 200;
-  line-height: 0;
+  line-height: 0.9;
 }
 
 .weather h2 {
