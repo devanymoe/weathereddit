@@ -68,8 +68,25 @@
             window.onmousemove = function (e) {
               var x = e.clientX;
               var y = e.clientY;
-              $thisHover.css('top',(y + 20) + 'px');
               $thisHover.css('left',(x + 20) + 'px');
+              if (y < 50) {
+                $thisHover.css('top',(y + 40) + 'px');
+              }
+              else if (y < 200) {
+                $thisHover.css('top',(y + -20) + 'px');
+              }
+              else if (y < 200) {
+                $thisHover.css('top',(y + -50) + 'px');
+              }
+              else if (y < 300) {
+                $thisHover.css('top',(y + -120) + 'px');
+              }
+              else if (y < 370) {
+                $thisHover.css('top',(y + -200) + 'px');
+              }
+              else {
+                $thisHover.css('top',(y + -330) + 'px');
+              }
             };
             removeHover($hoverImage,$thisHover);
           })
