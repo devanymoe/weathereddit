@@ -15,7 +15,11 @@
     for (var i = 0; i < response.data.children.length; i++) {
       var post = response.data.children[i].data
       if (post.stickied === false && count < 10) {
-        var $redditPost = $('<div class="post"><div class="postMain"><a class="thumbURL"><div class="thumbnail"><img></div></a><div class="postContainer"><a class="postURL"><div class="title"></div></a><div class="postDetails"><span class="url"></span><a class="permalink"><span class="comments"></span></a><span class="author">by <a class="user"></a></span></div></div></div></div>');
+        var $postText = post.selftext;
+        var $redditPost = $('<div class="post"><div class="postMain"><a class="thumbURL"><div class="thumbnail"><img></div></a><div class="postContainer"><a class="postURL"><div class="title"></div></a><div class="postDetails"><span class="url"></span><a class="permalink"><span class="comments"></span></a><span class="author">by <a class="user"></a></span><p class="innerText hidden">' + $postText + '</p></div></div></div></div>');
+        var $innerText = $('.innerText')
+        var $postContainer = $('.postContainer');
+        $postContainer.append($innerText);
         $redditPost.find('.title').text(post.title);
         $redditPost.find('.postURL').attr('href',post.url);
         $redditPost.find('.url').text('(' + post.domain + ')');
@@ -27,22 +31,18 @@
           $redditPost.find('img').attr('src','images/textopen.jpg');
           $redditPost.find('img').addClass('textimage');
           var $expandPost = $('.textimage');
-          var $postText = post.selftext;
-          var $innerText = $('<p class="innerText hidden">' + $postText + '</p>')
-          var $postContainer = $('.postContainer');
-          $postContainer.append($innerText);
           $redditPost.find('img').on('click', function(){
             var $clickedImage = $(this);
             var $thisMain = $clickedImage.closest('.postMain');
             var $thisPostText = $thisMain.find('.innerText');
             $thisPostText.toggleClass('hidden');
+            if ($clickedImage.attr('src') === 'images/textopen.jpg') {
+              $clickedImage.attr('src','images/textclose.jpg')
+            }
+            else {
+              $clickedImage.attr('src','images/textopen.jpg')
+            }
 
-
-            // need to first switch images on click.
-            // then toggle class on click
-
-            // var $postContainer = ('.postContainer');
-            // $postContainer.append('<p>posttexthere</p>')
           })
         }
         else {

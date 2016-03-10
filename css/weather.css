@@ -67,6 +67,7 @@ div .wi-day-cloudy {
   font-family: "Helvetica Neue";
   font-weight: 200;
   line-height: 0.9;
+  margin-top: 0px;
 }
 
 .weather h2 {
