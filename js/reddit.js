@@ -49,8 +49,30 @@
         }
         else {
           $redditPost.find('img').attr('src',post.thumbnail);
+          $redditPost.find('img').attr('data-alt-src',post.preview.images[0].source.url);
           $redditPost.find('.thumbURL').attr('href',post.url);
           $redditPost.find('.thumbURL').attr('target','_blank');
+          var removeHover = function($hoverImage,$thisHover) {
+            $hoverImage.on('mouseout', function(){
+              $thisHover.remove();
+            })
+            $(document).on('scroll', function(){
+              $thisHover.remove();
+            })
+          }
+          $redditPost.find('img').on('mouseover', function(){
+            var $hoverImage = $(this);
+            var $hoverPostMain = $hoverImage.closest('.postMain');
+            var $thisHover = $('<img class="hoverZoom" src='+ $hoverImage.attr('data-alt-src') +'>')
+            $hoverPostMain.append($thisHover);
+            window.onmousemove = function (e) {
+              var x = e.clientX;
+              var y = e.clientY;
+              $thisHover.css('top',(y + 20) + 'px');
+              $thisHover.css('left',(x + 20) + 'px');
+            };
+            removeHover($hoverImage,$thisHover);
+          })
         }
         $reddit.append($redditPost);
         count += 1;

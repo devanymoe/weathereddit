@@ -53,6 +53,10 @@ div .wi-day-cloudy {
   margin-top: 15%;
 }
 
+.todayIcon .wi-day-cloudy {
+  margin-top: 36%;
+}
+
 .forecastOther i {
   font-size: 46px;
   margin-right: 12px;

@@ -1,5 +1,5 @@
 .reddit {
-  height: 200px;
+  height: 180px;
   background-color: #fff;
   padding: 16px 24px 16px 16px;
 }
@@ -36,21 +36,6 @@
   display: flex;
 }
 
-.thumbnail {
-  width: 50px;
-  height: 50px;
-  margin-right: 14px;
-  margin-top: 3px;
-  overflow: hidden;
-  padding-bottom: 3px;
-}
-
-.post img {
-  left: 50%;
-  top: 50%;
-  height: 100%;
-}
-
 .title {
   flex: 1;
   text-align: justify;
@@ -73,4 +58,29 @@
 
 .textimage:hover {
   cursor: pointer;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin-right: 14px;
+  margin-top: 3px;
+  overflow: hidden;
+  padding-bottom: 3px;
+  position: relative;
+}
+
+
+.thumbnail img {
+  left: 50%;
+  top: 50%;
+  height: 100%;
+}
+
+.hoverZoom {
+  overflow: visible;
+  z-index:999;
+  position: absolute;
+  max-width: 350px;
+  max-height: 350px;
 }

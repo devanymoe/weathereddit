@@ -15,7 +15,7 @@ body {
   border: 1px solid #b7b7b7;
   margin-top: 0;
   max-height: 540px;
-  max-width: 400px;
+  max-width: 430px;
   font-family: "Helvetica Neue";
   font-weight: 200;
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
@@ -26,6 +26,8 @@ body {
 
 .scroll {
   overflow-y: scroll;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 header {
