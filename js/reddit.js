@@ -17,9 +17,9 @@
       if (post.stickied === false && count < 10) {
         var $postText = post.selftext;
         var $redditPost = $('<div class="post"><div class="postMain"><a class="thumbURL"><div class="thumbnail"><img></div></a><div class="postContainer"><a class="postURL"><div class="title"></div></a><div class="postDetails"><span class="url"></span><a class="permalink"><span class="comments"></span></a><span class="author">by <a class="user"></a></span><p class="innerText hidden">' + $postText + '</p></div></div></div></div>');
-        var $innerText = $('.innerText')
-        var $postContainer = $('.postContainer');
-        $postContainer.append($innerText);
+        // var $innerText = $('.innerText')
+        // var $postContainer = $('.postContainer');
+        // $postContainer.append($innerText);
         $redditPost.find('.title').text(post.title);
         $redditPost.find('.postURL').attr('href',post.url);
         $redditPost.find('.url').text('(' + post.domain + ')');
@@ -27,7 +27,7 @@
         $redditPost.find('.permalink').attr('href', 'https://www.reddit.com' + post.permalink)
         $redditPost.find('.user').text(post.author);
         $redditPost.find('.user').attr('href', 'https://www.reddit.com/user/' + post.author);
-        if (post.preview === undefined) {
+        if (post.is_self === true) {
           $redditPost.find('img').attr('src','images/textopen.jpg');
           $redditPost.find('img').addClass('textimage');
           var $expandPost = $('.textimage');
@@ -42,18 +42,15 @@
             else {
               $clickedImage.attr('src','images/textopen.jpg')
             }
-
           })
         }
+        else if (post.preview === undefined) {
+          $redditPost.find('img').attr('src','images/nopreview.jpg');
+        }
         else {
-          if (post.thumbnail === "self"){
-            $redditPost.find('img').attr('src','images/textopen.jpg');
-          }
-          else {
-            $redditPost.find('img').attr('src',post.thumbnail);
-            $redditPost.find('.thumbURL').attr('href',post.url);
-            $redditPost.find('.thumbURL').attr('target','_blank');
-          }
+          $redditPost.find('img').attr('src',post.thumbnail);
+          $redditPost.find('.thumbURL').attr('href',post.url);
+          $redditPost.find('.thumbURL').attr('target','_blank');
         }
         $reddit.append($redditPost);
         count += 1;

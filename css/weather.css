@@ -37,7 +37,8 @@
 i {
   font-size: 80px;
   display: block;
-  color: #999;
+  /*color: #999;#00BFA5;#00D5C4*/
+  color: #17b4a7;
   margin-bottom: 5%;
 }
 
@@ -66,7 +67,7 @@ div .wi-day-cloudy {
   font-size: 24px;
   font-family: "Helvetica Neue";
   font-weight: 200;
-  line-height: 0.9;
+  line-height: 1;
   margin-top: 0px;
 }
 
@@ -100,4 +101,12 @@ div .wi-day-cloudy {
 
 .highLowLater {
   font-size: 20px;
+}
+
+.highLow, .highLowLater {
+  /*color: #aaa;*/
+}
+
+.weekdayToday, .weekdayTomorrow, .weekdayNext {
+  color: #aaa;
 }

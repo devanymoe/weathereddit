@@ -6,7 +6,9 @@
 
 .reddit p {
   font-size: 13px;
-  text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
 }
 
 .hidden {
@@ -64,7 +66,7 @@
 }
 
 .postDetails a {
-  color: #308796;
+  color: #17b4a7;
 }
 
 .postDetails {
