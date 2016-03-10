@@ -69,6 +69,7 @@ div .wi-day-cloudy {
   font-weight: 200;
   line-height: 1;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .weather h2 {
@@ -92,6 +93,7 @@ div .wi-day-cloudy {
 
 .todayText {
   font-size: 12px;
+  margin-top: 6px;
 }
 
 .highLow {
@@ -107,6 +109,6 @@ div .wi-day-cloudy {
   /*color: #aaa;*/
 }
 
-.weekdayToday, .weekdayTomorrow, .weekdayNext {
+.weekdayToday, .weekdayTomorrow, .weekdayNext, .todayText {
   color: #aaa;
 }
