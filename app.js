@@ -3,7 +3,7 @@ var menubar = require('menubar')
 var mb = menubar({
   dir: ".",
   width: 430,
-  height: 510,
+  height: 540,
   transparent: true,
   "node-integration": false,
   hasShadow: false
