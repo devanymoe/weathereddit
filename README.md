@@ -5,7 +5,7 @@ Weathereddit is a menubar app that streamlines your morning routine. In one easy
 
 1) Create a [Wunderground API key](https://www.wunderground.com/weather/api/)
 
-2) Create a config.js file in the js directory containing the following:
+2) Create a config.js file in the js directory containing the following
 
 ```
 var config = {
