@@ -1,7 +1,7 @@
 var menubar = require('menubar')
 
 var mb = menubar({
-  dir: ".",
+  dir: __dirname,
   width: 430,
   height: 540,
   transparent: true,
