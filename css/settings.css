@@ -27,6 +27,12 @@ button {
   margin-top: 10px;
   font-weight: 400;
 }
+button:focus {
+  outline: none;
+}
+button:active {
+  background-color: #11a599;
+}
 .zip, .subred, .submit {
   margin-bottom: 20px;
 }
