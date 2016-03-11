@@ -79,13 +79,13 @@
                 $thisHover.css('top',(y + -50) + 'px');
               }
               else if (y < 300) {
-                $thisHover.css('top',(y + -120) + 'px');
+                $thisHover.css('top',(y + -130) + 'px');
               }
               else if (y < 370) {
-                $thisHover.css('top',(y + -200) + 'px');
+                $thisHover.css('bottom',50 + 'px');
               }
               else {
-                $thisHover.css('top',(y + -330) + 'px');
+                $thisHover.css('bottom',30 + 'px');
               }
             };
             removeHover($hoverImage,$thisHover);
