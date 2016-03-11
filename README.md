@@ -3,15 +3,17 @@ Weathereddit is a menubar app that streamlines your morning routine. In one easy
 
 ## How to Run
 
-1. Create a [Wunderground API key](https://www.wunderground.com/weather/api/)
+1) Create a [Wunderground API key](https://www.wunderground.com/weather/api/)
 
-2. Create a config.js file in js directory containing the following:
+2) Create a config.js file in js directory containing the following:
+
 ```
 var config = {
   key: 'your key here'
 }
-```
-3. Run the following in your terminal
+``` 
+
+3) Run the following in your terminal
 ```
 npm install electron-prebuilt -g
 electron index.js
