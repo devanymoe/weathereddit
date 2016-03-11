@@ -3,63 +3,49 @@
   background-color: #fff;
   padding: 16px 24px 16px 16px;
 }
-
 .reddit p {
   font-size: 13px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: pre-line;
 }
-
 .hidden {
   display: none;
 }
-
 .post {
   margin-bottom: 14px;
   padding-bottom: 14px;
   border-bottom: 1px solid #eee;
 }
-
 .post:last-child {
   border-bottom: none;
 }
-
 .postContainer {
   flex-wrap: wrap;
   flex-direction: column;
   max-width: 84%;
   flex: 1;
 }
-
 .postMain {
   display: flex;
 }
-
 .title {
   flex: 1;
   text-align: justify;
   font-size: 14px;
 }
-
 .url, .comments, .author {
   margin-top: 5px;
   margin-right: 7px;
   display: inline-block;
   font-size: 11px;
 }
-
 .postDetails a {
   color: #17b4a7;
 }
-
-.postDetails {
-}
-
 .textimage:hover {
   cursor: pointer;
 }
-
 .thumbnail {
   width: 50px;
   height: 50px;
@@ -69,17 +55,14 @@
   padding-bottom: 3px;
   position: relative;
 }
-
-
 .thumbnail img {
   left: 50%;
   top: 50%;
   height: 100%;
 }
-
 .hoverZoom {
   overflow: visible;
-  z-index:999;
+  z-index: 999;
   position: absolute;
   max-width: 305px;
   max-height: 305px;

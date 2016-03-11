@@ -1,16 +1,12 @@
-/*main-styles*/
-
 html {
   overflow: hidden;
 }
-
 body {
   background-color: transparent;
   color: #666;
   font-size: 14px;
   padding-top: 6px;
 }
-
 .container {
   border: 1px solid #b7b7b7;
   margin-top: 0;
@@ -18,59 +14,52 @@ body {
   max-width: 430px;
   font-family: "Helvetica Neue";
   font-weight: 200;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   position: relative;
   background-color: #fff;
 }
-
 .scroll {
   overflow-y: scroll;
   padding-left: 10px;
   padding-right: 10px;
 }
-
 header {
   height: 30px;
   background-color: #fff;
   padding: 5px;
   text-align: right;
 }
-
 header img {
   width: 40px;
   opacity: 0.35;
 }
-
 .container:after, .container:before {
   border-bottom: 14px solid #fff;
-	border-right: 14px solid transparent;
-	border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-left: 14px solid transparent;
   left: 50%;
   margin-left: -14px;
-	content: "";
-	display: inline-block;
-	height: 0;
-	width: 0;
-	vertical-align: middle;
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  vertical-align: middle;
   position: absolute;
   top: -14px;
 }
-
 .container:before {
   border-bottom: 15px solid #b7b7b7;
-	border-right: 15px solid transparent;
-	border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
   border-top-color: inherit;
   top: -15px;
   margin-left: -15px;
 }
-
 a {
   text-decoration: none;
   color: #1c1c1c;
 }
-
 a:hover {
   color: #1c1c1c;
 }

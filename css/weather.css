@@ -6,13 +6,11 @@
   align-items: center;
   justify-content: center;
 }
-
 .forecastOther {
   height: 100px;
   display: flex;
   border-bottom: 1px solid #eee;
 }
-
 .forecastTomorrow {
   max-height: 100px;
   background-color: #fff;
@@ -23,7 +21,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .forecastNext {
   max-height: 100px;
   background-color: #fff;
@@ -33,39 +30,31 @@
   align-items: center;
   justify-content: center;
 }
-
 i {
   font-size: 80px;
   display: block;
   color: #17b4a7;
   margin-bottom: 5%;
 }
-
 .todayIcon i {
   margin-bottom: 22%;
 }
-
 div .wi-cloud, div .wi-day-sunny, div .wi-cloudy {
   margin-bottom: 0;
 }
-
 div .wi-day-cloudy {
   margin-top: 15%;
 }
-
 .todayIcon .wi-day-cloudy {
   margin-top: 36%;
 }
-
 .forecastOther i {
   font-size: 46px;
   margin-right: 12px;
 }
-
 .forecastOther h2 {
   flex: 1;
 }
-
 .weather h1 {
   font-size: 24px;
   font-family: "Helvetica Neue";
@@ -74,44 +63,27 @@ div .wi-day-cloudy {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
 .weather h2 {
   font-size: 16px;
   font-family: "Helvetica Neue";
   font-weight: 200;
   line-height: 0;
 }
-
-.todayContainer {
-
-}
-
 .todayIcon {
   margin-right: 16px;
   text-align: center;
 }
-
-.iconTwo, .iconThree {
-}
-
 .todayText {
   font-size: 12px;
   margin-top: 6px;
 }
-
 .highLow {
   font-size: 24px;
   margin-top: 4px;
 }
-
 .highLowLater {
   font-size: 20px;
 }
-
-.highLow, .highLowLater {
-  /*color: #aaa;*/
-}
-
 .weekdayToday, .weekdayTomorrow, .weekdayNext, .todayText {
   color: #aaa;
 }
